@@ -1,0 +1,14 @@
+{% for anaQuantif in  ana_Quantif %}
+<div class ="anaQuantif">
+
+   <h3>  id_quantification {{anaQuantif.id_quantification}} </h3>
+   <p>  id_analysis {{anaQuantif.id_analysis}} </p>
+   <p>  quantif_file  {{anaQuantif.quantif_file}} </p>
+   <p>   reference {{anaQuantif.is_reference}} </p>
+  
+</div>
+
+{%empty%}
+<p> aucune Quanti</p>
+{%endfor%}
+
