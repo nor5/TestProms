@@ -27,19 +27,19 @@ def allProject(request):
    
     project = Project.objects.all()   
 
-    return render(request, 'projectItemsManagement/promsLogo.html', {'Ana_Quantification': Quantification})
+    return render(request, 'projectItemsManagement/allProjects.html', {'list_Project': project})
 
 
-def quanti(request, id):
+def selectedproject(request, id):
    
     try:
 
-      Quantif = AnaQuantification.objects.filter(id_quantification=id)
-    
-    except AnaQuantification.DoesNotExist:
+      Selectproject = Project.objects.filter(id_project=id)
+      proteins= Protein.objects.filter(id_project=id)
+    except project.DoesNotExist:
             raise Http404
 
-    return render (request, 'projectItemsManagement/lire.html', {'ana_Quantif': Quantif})
+    return render (request, 'projectItemsManagement/selectedProject.html', {'selected_Project': Selectproject,'project_proteins': proteins})
 
 
 

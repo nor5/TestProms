@@ -1,0 +1,30 @@
+{% extends "baseProms.html" %}
+{% block title %}Project{% endblock %}
+{% block content %}
+   {% for project in selected_Project %}
+<div class ="project">
+
+   <p> {{project.id_project}} </p>
+   <p>{{project.name}}</p>
+   <p> {{project.owner}} </p>
+
+{% for prot in project_proteins %}
+
+
+   <h3>id protein:  {{prot.id_protein}} </h3>
+   <p> id_master_protein : {{prot.id_master_protein}}</p>
+   <p> alias: {{prot.alias}} </p>
+ <p> identifier: {{prot.identifier}} </p>
+   
+
+
+{%empty%}
+<p> aucun prot</p>
+{%endfor%}
+
+</div>
+
+{%empty%}
+<p> aucun projet</p>
+{%endfor%}
+{% endblock %}

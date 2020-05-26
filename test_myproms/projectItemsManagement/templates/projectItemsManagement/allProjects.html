@@ -1,0 +1,20 @@
+{% extends "baseProms.html" %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+   {% for projects in list_Project %}
+<div class ="projects">
+ <p><a href="{% url 'AllProjects'  projects.id_project %}" > <h3> {{projects.name}} </h3></a></p>
+   <p>  id: {{projects.id_project}} </p>
+
+   
+   <p> owner:  {{projects.owner}} </p>
+  
+  
+</div>
+
+{%empty%}
+<p> aucun projet</p>
+{%endfor%}
+{% endblock %}
+
+
