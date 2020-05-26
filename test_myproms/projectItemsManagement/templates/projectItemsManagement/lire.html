@@ -1,3 +1,8 @@
+{% extends "baseProms.html" %}
+{% block title %}ANAQuantification{% endblock %}
+{% block content %}
+
+
 {% for anaQuantif in  ana_Quantif %}
 <div class ="anaQuantif">
 
@@ -11,4 +16,4 @@
 {%empty%}
 <p> aucune Quanti</p>
 {%endfor%}
-
+{% endblock %}
