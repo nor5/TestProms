@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'test_myproms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':  'myproms_data',
+        'NAME':  'myproms',
  
         'USER': 'postgres',
         'PASSWORD': 'stage!2018',        

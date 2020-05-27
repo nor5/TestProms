@@ -7,20 +7,8 @@
    <p> {{project.id_project}} </p>
    <p>{{project.name}}</p>
    <p> {{project.owner}} </p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> Show protein list</h3></a></p>
 
-{% for prot in project_proteins %}
-
-
-   <h3>id protein:  {{prot.id_protein}} </h3>
-   <p> id_master_protein : {{prot.id_master_protein}}</p>
-   <p> alias: {{prot.alias}} </p>
- <p> identifier: {{prot.identifier}} </p>
-   
-
-
-{%empty%}
-<p> aucun prot</p>
-{%endfor%}
 
 </div>
 

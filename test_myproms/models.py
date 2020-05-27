@@ -694,7 +694,7 @@ class Ontology(models.Model):
         managed = False
         db_table = 'ontology'
 
-"""
+
 class ParentExploranalysis(models.Model):
     id_exploranalysis = models.OneToOneField(Exploranalysis, models.DO_NOTHING, db_column='id_exploranalysis', primary_key=True)
     id_parent_exploranalysis = models.ForeignKey(Exploranalysis, models.DO_NOTHING, db_column='id_parent_exploranalysis')
@@ -726,7 +726,7 @@ class ParentSwathLib(models.Model):
         managed = False
         db_table = 'parent_swath_lib'
         unique_together = (('id_swath_lib', 'id_parent_swath_lib'),)
-"""
+
 
 class PathwayAnalysis(models.Model):
     id_pathway_analysis = models.BigAutoField(primary_key=True)

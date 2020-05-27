@@ -42,6 +42,17 @@ def selectedproject(request, id):
     return render (request, 'projectItemsManagement/selectedProject.html', {'selected_Project': Selectproject,'project_proteins': proteins})
 
 
+def projectProteinList(request, id):
+   
+    try:
+
+      
+      proteins= Protein.objects.filter(id_project=id)
+    except project.DoesNotExist:
+            raise Http404
+
+    return render (request, 'projectItemsManagement/proteinList.html', {'project_proteins': proteins})
+
 
 
 
