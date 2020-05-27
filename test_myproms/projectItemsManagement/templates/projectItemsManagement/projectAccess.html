@@ -1,0 +1,56 @@
+{% extends "baseProms.html" %}
+{% block title %}Access{% endblock %}
+{% block content %}
+  
+
+<div class ="exp">
+
+{% for access in project_access %}
+
+
+   <h3>id_user:  {{access.id_user}} </h3>
+   
+   <p> id_profile : {{access.id_profile}}</p>
+
+
+
+{% for uprofile in user_profile %}
+{% if   access.id_profile == uprofile.id_profile  %}
+
+
+   
+   <p> name************ : {{uprofile.name}}</p>
+  
+
+
+{%endif%}
+
+
+{%empty%}
+<p> aucun profile</p>
+{%endfor%}
+
+
+
+
+
+
+
+  
+
+
+{%empty%}
+<p> aucun access</p>
+{%endfor%}
+
+</div> 
+
+
+
+
+
+
+
+
+
+{% endblock %}

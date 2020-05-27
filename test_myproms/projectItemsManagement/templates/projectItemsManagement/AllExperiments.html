@@ -1,0 +1,22 @@
+{% extends "baseProms.html" %}
+{% block title %}Experiment{% endblock %}
+{% block content %}
+   
+<div class ="exp">
+
+{% for experiment in project_exp %}
+
+
+   <h3>id :  {{experiment.id_experiment}} </h3>
+   <p> experiment name : {{experiment.name}}</p>
+  
+
+
+{%empty%}
+<p> aucune exp</p>
+{%endfor%}
+
+</div>
+
+
+{% endblock %}

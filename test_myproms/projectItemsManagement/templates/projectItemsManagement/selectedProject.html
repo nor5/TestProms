@@ -7,7 +7,13 @@
    <p> {{project.id_project}} </p>
    <p>{{project.name}}</p>
    <p> {{project.owner}} </p>
-<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> Show protein list</h3></a></p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3>  protein list</h3></a></p>
+<p><a href="{% url 'AllExperiments'  project.id_project %}" > <h3> Experiments</h3></a></p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> sample</h3></a></p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> Analysis</h3></a></p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> biosample</h3></a></p>
+<p><a href="{% url 'ProteinList'  project.id_project %}" > <h3> design</h3></a></p>
+<p><a href="{% url 'ProjectAccess'  project.id_project %}" > <h3> project access </h3></a></p>
 
 
 </div>
